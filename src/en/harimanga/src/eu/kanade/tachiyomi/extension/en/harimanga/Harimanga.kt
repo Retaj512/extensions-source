@@ -3,9 +3,9 @@ package eu.kanade.tachiyomi.extension.en.harimanga
 import eu.kanade.tachiyomi.multisrc.madara.Madara
 import eu.kanade.tachiyomi.network.GET
 import eu.kanade.tachiyomi.network.interceptor.rateLimit
+import eu.kanade.tachiyomi.source.model.FilterList
 import eu.kanade.tachiyomi.source.model.SChapter
 import eu.kanade.tachiyomi.source.model.SManga
-import eu.kanade.tachiyomi.source.model.FilterList
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 import okhttp3.Request
@@ -30,11 +30,7 @@ class Harimanga :
     override fun headersBuilder() = super.headersBuilder()
         .set("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36")
 
-    // All pages live under /home, not /manga/
-    override val mangaSubString = "home"
-
     // Pagination is ?page=N not /page/N/
-    override fun searchPage(page: Int) = if (page == 1) "" else "?page=$page"
 
     override fun popularMangaRequest(page: Int) = GET("$baseUrl/home?m_orderby=views${if (page > 1) "&page=$page" else ""}", headers)
 
