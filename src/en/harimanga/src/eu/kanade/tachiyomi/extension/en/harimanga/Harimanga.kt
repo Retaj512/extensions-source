@@ -14,4 +14,5 @@ class Harimanga :
         .build()
 
     override val useLoadMoreRequest = LoadMoreStrategy.Never
+    override val fetchChaptersFromAjax = false
 }

@@ -3,7 +3,7 @@ ext {
     extClass = '.Harimanga'
     themePkg = 'madara'
     baseUrl = 'https://www.harimanga.co.uk'
-    overrideVersionCode = 102
+    overrideVersionCode = 7
     isNsfw = true
 }
 
