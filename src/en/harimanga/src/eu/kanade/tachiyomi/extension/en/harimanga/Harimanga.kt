@@ -6,7 +6,7 @@ import eu.kanade.tachiyomi.network.interceptor.rateLimit
 class Harimanga :
     Madara(
         "Harimanga",
-        "https://www.harimanga.co.uk/home",
+        "https://www.harimanga.co.uk",
         "en",
     ) {
     override val client = super.client.newBuilder()
