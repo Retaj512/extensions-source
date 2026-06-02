@@ -3,11 +3,8 @@ ext {
     extClass = '.Harimanga'
     themePkg = 'madara'
     baseUrl = 'https://www.harimanga.co.uk'
-    overrideVersionCode = 8
+    overrideVersionCode = 6
     isNsfw = true
 }
-apply plugin: "kei.plugins.extension.legacy"
 
-dependencies {
-    implementation(libs.kotlin.json)
-}
+apply plugin: "kei.plugins.extension.legacy"
